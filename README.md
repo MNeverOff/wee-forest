@@ -1,4 +1,6 @@
-# WeeForest Lens - mapping trees of the United Kingdom
+![WeeForest Lens Cover Image](assets/cover-compressed.png)
+
+# Mapping trees of the United Kingdom
 
 ## Disclaimer
 

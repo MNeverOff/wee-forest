@@ -160,6 +160,10 @@ a:hover, .nav-link:hover, .logo h1:hover {
     margin: 0 0 8px 8px;
 }
 
+mapboxgl-ctrl-bottom-right {
+    z-index: 100; /* Necessary for two-line credits to be over UI */
+}
+
 .mapboxgl-ctrl-attrib.mapboxgl-compact {
     margin-bottom: 6px;
 }
