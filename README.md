@@ -30,7 +30,7 @@ Separately there's a [docker](docker) folder with a sample docker compose config
 
 ## Installation
 
-As this repository doesn't have neither raw nor processed data attached, you would need to perform a few steps to get the .mbtiles and .parquet files used in area calculation and map visualisation:
+As this repository doesn't have neither raw nor processed data attached, you would need to perform a few steps to get the .mbtiles and .parquet files used in area visualisation calculation:
 
 1. Clone the repository
 1. Configure VSCode to run Jupyter Notebooks by installing Python, Jupyter and Polyglot Notebooks extensions
@@ -41,7 +41,7 @@ As this repository doesn't have neither raw nor processed data attached, you wou
 1. Run the [Area Calculation Notebook](data/uk_gb_areas.ipynb) to completion - generating the point datasets for area calculation.
 1. Finally, run the [MBTiles Notebook](data/uk_gb_tiles.ipynb) to generate the .mbtiles files for the map, 23 in total, around 4.5GB total size.
 1. Set up the .env file in the [lens](./lens/) directory, following the instructions in the [lens readme](./lens/README.md).
-1. With everything done, you should be able to run the dev server via `npm run dev`, or production in docker via `npm run docker: build` in lens and `docker-compose up` in docker folders, assuming `.env` files were set up correctly. First few minutes will be spent generating indices so the area calculation might be unresponsive.
+1. With everything done, you should be able to run the dev server via `npm run dev`, or production in docker via `npm run docker: build` in lens and `docker-compose up` in docker folders, assuming `.env` files were set up correctly. First few minutes will be spent generating indexes so the area calculation might be unresponsive.
 
 ## Contributing
 

@@ -63,7 +63,7 @@ async function loadParquet(con, filePath, overwrite = false) {
 }
 
 async function createIndexes() {
-    console.log('Creating indices for duckdb. Requests are served un-indexed for now.');
+    console.log('Creating indexes for duckdb. Requests are served un-indexed for now.');
 
     try {
         const tables = await new Promise((resolve, reject) => {
@@ -74,7 +74,7 @@ async function createIndexes() {
         });
 
         for (const table of tables) {
-            console.log(`Creating indices for table ${table.name}`);
+            console.log(`Creating indexes for table ${table.name}`);
 
             const columns = await new Promise((resolve, reject) => {
                 creatorCon.all(`PRAGMA table_info(${table.name})`, (err, result) => {
@@ -107,11 +107,11 @@ async function createIndexes() {
         }
     } 
     catch (error) {
-        console.log('An error occurred while creating indices');
+        console.log('An error occurred while creating indexes');
         console.error(error);
     }
     finally {
-        console.log('Finished creating indices');
+        console.log('Finished creating indexes');
     }
 }
 
@@ -161,7 +161,7 @@ app.listen(port, '0.0.0.0', () => {
     console.log(`Server is running on port ${port}`);
 });
 
-// Load all Parquet files without awaiting and then create indices
+// Load all Parquet files without awaiting and then create indexes
 loadAll(process.env.PARQUET_PATH, process.env.RECREATE_DATABASE === 'true').catch(console.error)
 .then(() => createIndexes()).then(() => creatorCon.close());
 
