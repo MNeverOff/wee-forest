@@ -12,7 +12,7 @@
     "build": "npm install && node build.js",
     "serve": "node src/server.mjs",
     "prod": "npm run build && npm run serve",
-    "docker:build": "npm run build && docker build --build-arg GIT_HASH=$(git rev-parse --short HEAD) -t wee-forest-lens --no-cache ../",
+    "docker:build": "npm run build && docker build --build-arg GIT_HASH=$(git rev-parse --short HEAD) -t mneveroff/wee-forest-lens:$(git rev-parse --short HEAD) --no-cache ../",
     "docker:serve": "node server.mjs"
   },
   "repository": {
@@ -39,7 +39,8 @@
     "lit-html": "^3.1.2",
     "mapbox-gl": "^3.2.0",
     "mapbox-gl-compare": "^0.4.1",
-    "tileserver-gl-light": "^4.10.3"
+    "tileserver-gl-light": "^4.10.3",
+    "esbuild": "^0.20.2"
   },
   "engines": {
     "node": "20.x"
@@ -47,7 +48,6 @@
   "devDependencies": {
     "@types/mapbox-gl": "^3.1.0",
     "concurrently": "^8.2.2",
-    "esbuild": "^0.20.2",
     "nodemon": "^3.1.0"
   }
 }

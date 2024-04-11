@@ -161,13 +161,14 @@ app.listen(port, '0.0.0.0', () => {
     console.log(`Server is running on port ${port}`);
 });
 
+
+let recreateDatabase = process.env.RECREATE_DATABASE ? process.env.RECREATE_DATABASE === 'true' : false;
 // Load all Parquet files without awaiting and then create indexes
-loadAll(process.env.PARQUET_PATH, process.env.RECREATE_DATABASE === 'true').catch(console.error)
+loadAll(process.env.PARQUET_PATH, recreateDatabase).catch(console.error)
 .then(() => createIndexes()).then(() => creatorCon.close());
 
 const tileServerUrl = process.env.TILE_SERVER_HOST + '/' + 
-  (process.env.STATIC_SERVER_PATH ? process.env.STATIC_SERVER_PATH + '/' : '') + 
-  (process.env.TILE_SERVER_PATH || '/');
+staticServerPath + (process.env.TILE_SERVER_PATH || '/');
 const tileserver = spawn('tileserver-gl-light', ['-c', 'tileserver-config.json', '--public_url', tileServerUrl || '']);
 
 tileserver.stdout.on('data', (data) => {
@@ -182,7 +183,7 @@ tileserver.on('close', (code) => {
     console.log(`tileserver-gl-light exited with code ${code}`);
 });
 
-const tileServerPath = (process.env.STATIC_SERVER_PATH ? process.env.STATIC_SERVER_PATH + '/' : '') + (process.env.TILE_SERVER_PATH || '/');
+const tileServerPath = staticServerPath + (process.env.TILE_SERVER_PATH || '/');
 const tileServerPathRewrite = '^/' + tileServerPath;
 
 const tileserverProxy = createProxyMiddleware({
@@ -194,4 +195,4 @@ const tileserverProxy = createProxyMiddleware({
 
 app.use('/' + tileServerPath, limiter, tileserverProxy);
 
-app.use('/' + process.env.STATIC_SERVER_PATH, limiter, express.static(path.join(__dirname, process.env.STATIC_DIR || 'public')));
+app.use('/' + staticServerPath, limiter, express.static(path.join(__dirname, process.env.STATIC_DIR || 'public')));

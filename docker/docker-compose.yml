@@ -1,6 +1,6 @@
 services:
   wee_forest_lens:
-    image: wee-forest-lens
+    image: mneveroff/wee-forest-lens
     container_name: wee_forest_lens
     restart: unless-stopped
     env_file: .env

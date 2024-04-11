@@ -194,7 +194,6 @@ Now if we were to include Trees-outside-Woods into the comparison, whilst exclud
 | **Subtotal good trees** | **1,493,775** | **45.06%** |
 | Other Trees (forestry) | 1,821,456 | 54.94% |
 | **Total tree cover** | **3,315,231** | |
-| | | |
 
 For presentation purposes:
 

@@ -78,7 +78,7 @@ Barring the pushing to a registry, you can also archive the image and transfer i
 
 1. `docker save -o wee-forest-lens.tar wee-forest-lens:latest`.
 1. `rsync -avz --progress -e ssh wee-forest-lens.tar username@host:~/path`.
-1. On the remote machine: `docker load -i wee-forest-lens.tar && rm wee-forest-lens.tar`.
+1. On the remote machine: `docker load -i wee-forest-lens.tar && rm wee-forest-lens.tar` and finally `docker-compose down && docker-compose up -d`
 
 ## Contributing
 

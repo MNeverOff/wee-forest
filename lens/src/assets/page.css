@@ -123,13 +123,33 @@
         }
 
         .page-img {
+            position: relative;
+
             height: 448px;
             width: 100%;
+
+            margin-bottom: 2rem;
 
             background-size: auto 100%;
             background-position: center;
             background-repeat: no-repeat;
             background-origin: content-box;
+
+            figcaption {
+                position: absolute;
+                width: 100%;
+                bottom: -24px;
+                font-size: 10px;
+
+                text-align: center;
+                color: var(--dg-color-text-tertiary);
+
+                a {
+                    color: var(--dg-color-text-tertiary);
+                    text-decoration: none;
+                    font-weight: 500;
+                }
+            }
         }
 
         .page-btn {
