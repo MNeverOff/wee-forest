@@ -1,0 +1,47 @@
+{
+  "version": "0.2.0",
+  "compounds": [
+    {
+      "name": "dev",
+      "configurations": ["npm dev", "browser"],
+    },
+    {
+      "name": "prod",
+      "configurations": ["npm prod", "browser"],
+    }
+  ],
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "npm prod",
+      "runtimeExecutable": "npm",
+      "cwd": "${workspaceFolder}/lens",
+      "runtimeArgs": ["run", "prod"],
+      "console": "integratedTerminal",
+      "presentation": { "hidden": true },
+      "envFile": "${workspaceFolder}/lens/.env"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "npm dev",
+      "runtimeExecutable": "npm",
+      "cwd": "${workspaceFolder}/lens",
+      "runtimeArgs": ["run", "dev"],
+      "console": "integratedTerminal",
+      "presentation": { "hidden": true },
+      "envFile": "${workspaceFolder}/lens/.env"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "browser",
+      "url": "http://localhost:3939",
+      "runtimeExecutable": "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
+      "runtimeArgs": ["--remote-debugging-port=9222"],
+      "webRoot": "${workspaceFolder}/lens/src/",
+      "presentation": { "hidden": true },
+    }
+  ]
+}

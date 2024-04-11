@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <title>WeeForest Lens</title>
+        <description>Mapping trees of the United Kingdom</description>
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-compare/v0.4.0/mapbox-gl-compare.css" type="text/css">
+        <link href="./dist/index.css" rel="stylesheet" />
+        <script type="module" src="./dist/index.js"></script>
+        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+        <script defer data-domain="weeforest.org" src="https://plausible.devguild.ltd/js/script.js"></script>
+    </head>
+    <body>
+        <div id="app-lens" class="map-container"></div>
+        <a class="nav nav-left">
+            <div class="icon"></div>
+            <div class="logo nav-link">
+                <h2>WeeForest Lens</h1>
+            </div>
+            <div class="logo-mobile nav-link">
+                <h2>Lens</h1>
+            </div>
+        </a>
+        <div class="nav nav-right">
+            <a id="page-learn-btn" class="nav-link">
+                Learn
+            </a>
+            <a id="page-act-btn" class="nav-link">
+                Act
+            </a>
+            <a id="page-share-btn" class="nav-link">
+                Share
+            </a>
+        </div>
+        <div id="page-welcome" class="map-page hidden">
+            <span class="attribution page-credit">Made by <a href="https://neveroff.dev" target="_blank">Mike Neverov</a></span>
+            <div class="page-content">
+                <h1 class="page-header">WeeForest Lens</h1>
+                <h2 class="page-subheader">
+                    Mapping trees of the United Kingdom
+                </h2>
+                <p class="page-summary">
+                    The UK's National Forest Inventory proudly reports a 13% land coverage, but only a fraction of that land hosts Native Trees and 1/5 is just devoid of any trees.
+                </p>
+                <div class="page-img" id="img-page-welcome-uk-woodland-piechart"></div>
+                <ul>
+                    <li>
+                        Entire 55% of that 13% are plantations, on which the trees are a crop to be harvested, not to be enjoyed. They create a dark, lifeless canopy and poison the soil and water, making it too acidic for most species to live.
+                    </li>
+                    <li>
+                        Another 20% lies barren and felled with nothing but stumps and windrow.
+                    </li>
+                    <li>
+                        And <strong>only 25%</strong>, or 750,000 ha (3.2% of UK's land area) is Native Woodland, which is the only type of forest that furthers the UK's biodiversity, is likely to remain for the future generations and isn't just standing timber.
+                    </li>
+                </ul>
+                <div id="page-welcome-btn" class="page-btn btn elevation-100">
+                    Explore the map
+                </div>
+            </div>
+        </div>
+        <div id="page-learn" class="map-page hidden">
+            <div class="page-content">
+                <h1 class="page-header">About the Lens</h1>
+                <h2 class="page-subheader">
+                    Brief methodology reference and FAQ
+                </h2>
+                <p class="page-summary">
+                    In making this map I had to allow for a number of generalisations and simplifications for the sake of message clarity. I'll elaborate on some of these here, while the rest can be found in the <a href="https://github.com/MNeverOff/wee-forest">github repository.</a>
+                </p>
+                <div class="page-content-layout">
+                    <div class="page-content-block">
+                        <h3>
+                            Map coverage
+                        </h3>
+                        <p>
+                            Whilst Lens references the United Kingdom as a whole, the limitations of the underlying datasets mean that the map only covers the Great Britain: England, Scotland and Wales. Northern Ireland is not included due to absence of NFI data that's used as the primary source. 
+                        </p>
+                    </div>
+                    <div class="page-content-block">
+                        <h3>
+                            Area types and categories
+                        </h3>
+                        <p>
+                            The map is displayed in "Overlay" mode by default with opinionated labels. These aren't source definitions and are provided for clarity of the message. You can always discover the official designation by interacting with a specific polygon or switching the Advanced mode on. 
+                        </p>
+                    </div>
+                    <div class="page-content-block content-block-full">
+                        <h3>
+                            Perceived inaccuracies and errors
+                        </h3>
+                        <p>
+                            There are two main types of perceived errors that you might encounter: the clearly contradicting the satellite data and having tiny wrap-around/left-over slices of polygons close to each other. Former is likely caused by errors in the NFI data, i.e. designating empty land as woodland or vice versa. The latter is due to the overlay calculations and differences between AWI and NFI polygons, which sometimes can cause little slices of the larger polygon to remain visible, but in most cases it can safely be ignored.
+                        </p>
+                    </div>
+                    <div class="page-content-block content-block-full">
+                        <h3>
+                            What is a woodland anyways?
+                        </h3>
+                        <p>
+                            The issue of definitions around trees in the UK and abroad is surprisingly complex. For the purposes of official statistics used by NFI, the woodland is "... land predominately covered in trees (defined as land under stands of trees with a canopy cover of at least 20%, <strong>or the ability to achieve this</strong>, and with a minimum area of 0.5 hectare and minimum width of 20 m)..."<sup><a href="https://cdn.forestresearch.gov.uk/2022/02/nfi_method_statement_250511.pdf" target="_blank">1</a></sup>. The "ability to achieve" allows for inclusion of a vast swaths of land that you wouldn't see a single tree on and there's no guarantee or tracking of whether you will in a decade's time.
+                        </p>
+                    </div>
+                    <div class="page-content-block content-block-full">
+                        <h3>
+                            What are "good" trees and how many are there?
+                        </h3>
+                        <p>
+                            Stemming from the above, the answer is complex. I would argue that any tree that's native and isn't planted to be cut down is good. And the situation is a bit better than the NFI Woodland alone data lets on. There are about 1,555,000 ha (6.6% of GB's land area) of Native Trees and Trees Outside Woods<sup><a href="https://bluesky-world.com/ntm/" target="_blank">2</a></sup> combined, both of which can be considered "good". There are also a further 160,000 ha of hedges<sup><a href="https://catalogue.ceh.ac.uk/documents/d90a3733-2949-4dfa-8ac2-a88aef8699be" target="_blank">3</a></sup> across the entire country. Sadly both datasets are proprietary or require upfront payment and cannot be mapped as part of the Lens project at this time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page-act" class="map-page hidden">
+            <div class="page-content">
+                <h1 class="page-header">How you can help</h1>
+                <h2 class="page-subheader">
+                    Things you can do to improve the situation
+                </h2>
+                <p class="page-summary">
+                    There are numerous community projects, charities and other organisations that are dedicated to the cause of improving the dire state of the UK's biodiversity and tree coverage.</a>
+                </p>
+                <div class="page-content-layout">
+                    <div class="page-content-block">
+                        <h3>
+                            Spread the word
+                        </h3>
+                        <p>
+                            Simplest one, really. Spread the word about the issue, share your views and educate about the difference between native trees, forestry plantations and trees outside woods. Share this map.
+                        </p>
+                    </div>
+                    <div class="page-content-block">
+                        <h3>
+                            Volunteer and engage
+                        </h3>
+                        <p>
+                            Whilst professional planting is by far the most efficient way of afforestation, there is immense benefit in engaging locally and meeting new people. Seek out your local projects and events!
+                        </p>
+                    </div>
+                    <div class="page-content-block content-block-full">
+                        <h3>
+                            Support WeeForest Lens
+                        </h3>
+                        <p>
+                            This project is entirely open-source and has been built by one person. With your support I'll be able to continue improving the map and the resources within, potentially acquiring new ones like the hedge dataset (that's £300 admin fee) and making them available in Lens to the extent that the license allows.
+                        </p>
+                        <div class="block-cta stripe-btn-wrapper">
+                            <stripe-buy-button
+                            buy-button-id="buy_btn_1P1rEGFNcbnBdYhHOikfDRt9"
+                            publishable-key="pk_live_51OhySXFNcbnBdYhHGKWRpWPXQk5578cXTRXwzxKuxWXJZD7oPMRIPFNnUqGcKD8DsI2YSErBFtL6dW90J22F8U5U00ba3T7ltM"
+                            ></stripe-buy-button>
+                            <stripe-buy-button
+                            buy-button-id="buy_btn_1P1r8pFNcbnBdYhHETN2HXxb"
+                            publishable-key="pk_live_51OhySXFNcbnBdYhHGKWRpWPXQk5578cXTRXwzxKuxWXJZD7oPMRIPFNnUqGcKD8DsI2YSErBFtL6dW90J22F8U5U00ba3T7ltM"
+                            ></stripe-buy-button>
+                        </div>
+                    </div>
+                    <div class="page-content-block content-block">
+                        <h3>
+                            Donate to MossyEarth
+                        </h3>
+                        <p>
+                            <a href="https://www.mossy.earth/" target="_blank">Mossy Earth</a> is a spectacular organisation dedicated to rewilding and reforestation projects across the world, with solid ties to the UK. You can buy and even gift membership with them and see your contribution in action.
+                        </p>
+                    </div>
+                    <div class="page-content-block content-block">
+                        <h3>
+                            Donate to Woodland Trust
+                        </h3>
+                        <p>
+                            <a href="https://www.woodlandtrust.org.uk/" target="_blank">The Woodland Trust</a> is UK's largest woodland conservation charity and they do a lot of good work, so becoming a member would help them fund more of that work and you to be more engaged in their activities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page-share" class="map-page hidden">
+            <div class="page-content">
+                <h1 class="page-header">Share your view</h1>
+                <h2 class="page-subheader">
+                    This link will persist your viewpoint and settings
+                </h2>
+                <p class="page-summary">
+                    Spreading the word is important, and sharing via this link will help others see the same view you have seen.
+                </p>
+                <div class="page-content-layout">
+                    <div class="page-content-block content-block-full">
+                        <div class="link-block">
+                            <input id="share-url" type="text" class="input-readonly inset-100" readonly>
+                            <button id="copy-share-url" class="btn btn-copy elevation-100">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="attribution map-credit">Made by <a href="https://neveroff.dev" target="_blank">Mike Neverov</a></span>
+    </body>
+</html>

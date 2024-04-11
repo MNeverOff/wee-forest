@@ -1,0 +1,32 @@
+html:root {
+    --dg-color-bg: #F1F5F9;
+    --dg-color-bg--inverse: #0F172A;
+
+    --dg-color-surface-primary: #FFFFFF;
+    --dg-color-surface-primary--alpha-90: rgba(255, 255, 255, 0.9);
+    --dg-color-surface-primary--selected: #CBD5E1;
+    --dg-color-surface-primary--inverse: #1E293B;
+    --dg-color-surface-secondary: #F1F5F9;
+    --dg-color-surface-secondary--inverse: #334155;
+    --dg-color-surface-tertiary: #E2E8F0;
+    --dg-color-surface-tertiary--inverse: #475569;
+    --dg-color-surface--disabled: hexa(#000000, 0.1);
+
+    --dg-color-surface-fill-success: #16A34A;
+    --dg-color-surface-fill-info: #0891B2;
+
+    --dg-color-text-primary: #1F2937;
+    --dg-color-text-primary--inverse: #F3F4F6;
+    --dg-color-text-secondary: #374151;
+    --dg-color-text-secondary--inverse: #E5E7EB;
+    --dg-color-text-tertiary: #4B5563;
+    --dg-color-text-tertiary--inverse: #D1D5DB;
+    --dg-color-text--disabled: #9CA3AF;
+
+    --dg-color-text-success: #15803D;
+    --dg-color-text-danger: #B91C1C;
+    --dg-color-text-warning: #C2410C;
+
+    --dg-color-border-primary: #E4E4E7;
+    --dg-color-border-secondary: #D4D4D8;
+}

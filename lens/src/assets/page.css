@@ -1,0 +1,215 @@
+.map-page {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+
+    overflow: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: var(--dg-color-surface-primary--alpha-90);
+    z-index: 20;
+
+    &.hidden {
+        display: none;
+    }
+
+    .page-content {
+        max-width: 640px;
+        padding: 80px 16px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        row-gap: 1rem;
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .page-header {
+            font-size: 4rem;
+            font-weight: 300;
+
+            margin: 0;
+        }
+
+        .page-subheader {
+            font-size: 1.5rem;
+            font-weight: 500;
+
+            margin: 0;
+            margin-top: -1rem;
+        }
+
+        .page-summary {
+            margin-top: 0rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .page-content-layout {
+            width: 100%; 
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 1rem;
+
+            .page-content-block {
+                flex: 1 1 calc(50% - 1rem);
+                margin: 0;
+                box-sizing: border-box;
+
+                &.content-block-full {
+                    flex: 1 1 100%;
+                }
+
+                h3 {
+                    margin-top: 0;
+                    margin-bottom: 0.5rem;
+                }
+
+                p {
+                    margin-top: 0.5rem;
+                    margin-bottom: 0;
+                }
+
+            }
+
+            .link-block {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                input {
+                    flex-grow: 1;
+                }
+            }
+
+            .block-cta {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 0.5rem;
+                margin-top: 0.5rem;
+            }
+
+            .stripe-btn-wrapper {
+
+                stripe-buy-button {
+                    flex: 1 1 calc(50% - 1rem);
+                }
+            }
+        }
+
+        p, ul, li {
+            font-size: 1.1rem;
+        }
+
+        ul {
+            padding-left: 1rem;
+
+            *:not(:first-child) {
+                margin-top: 0.5rem;
+            }
+        }
+
+        .page-img {
+            height: 448px;
+            width: 100%;
+
+            background-size: auto 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-origin: content-box;
+        }
+
+        .page-btn {
+            position: sticky;
+            bottom: 1rem;
+
+            font-size: 1.2rem;                
+            color: var(--dg-color-text-primary--inverse);
+            background-color: var(--dg-color-surface-fill-info);
+
+            &:hover {
+                background-color: var(--dg-color-surface-fill-success);
+            }
+        }
+    }
+
+    .page-credit {
+        position: fixed;
+        top: 16px;
+        right: 16px;
+    }
+}
+
+#page-welcome {
+    z-index: 40;
+
+    #img-page-welcome-uk-woodland-piechart {
+        background-image: url(./img/uk-woodland-piechart.png);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .map-page { 
+
+        .page-content {
+            
+            h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+
+                margin-bottom: 1.5rem;
+            }
+
+            .page-img {
+                max-height: 320px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .map-page { 
+
+        .page-content {
+            max-width: 320px;
+            
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 0.8rem;
+
+                margin-bottom: 1rem;
+            }
+
+            p, ul, li {
+                font-size: 0.9rem;
+            }
+
+            .page-img {
+                max-height: 256px;
+            }
+
+            .page-content-layout .page-content-block {
+                flex: 1 1 100%;
+            }
+        }
+    }
+}

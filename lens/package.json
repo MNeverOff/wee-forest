@@ -1,0 +1,53 @@
+{
+  "name": "wee-forest-lens",
+  "version": "1.0.0",
+  "description": "Mapping trees of the United Kingdom",
+  "main": "public/index.html",
+  "type": "module",
+  "scripts": {
+    "start-tileserver": "tileserver-gl-light -c tileserver-config.json",
+    "watch-dev": "npm install && node build.dev.js",
+    "serve-dev": "nodemon src/server.mjs",
+    "dev": "concurrently \"npm run watch-dev\" \"npm run serve-dev\"",
+    "build": "npm install && node build.js",
+    "serve": "node src/server.mjs",
+    "prod": "npm run build && npm run serve",
+    "docker:build": "npm run build && docker build --build-arg GIT_HASH=$(git rev-parse --short HEAD) -t wee-forest-lens --no-cache ../",
+    "docker:serve": "node server.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MNeverOff/wee-forest-lens"
+  },
+  "keywords": [
+    "map",
+    "trees",
+    "forests",
+    "woodland",
+    "UK"
+  ],
+  "author": "Mike Neverov",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "duckdb": "^0.10.1",
+    "events": "^3.3.0",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "http-proxy-middleware": "^2.0.6",
+    "lit": "^3.1.2",
+    "lit-html": "^3.1.2",
+    "mapbox-gl": "^3.2.0",
+    "mapbox-gl-compare": "^0.4.1",
+    "tileserver-gl-light": "^4.10.3"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "devDependencies": {
+    "@types/mapbox-gl": "^3.1.0",
+    "concurrently": "^8.2.2",
+    "esbuild": "^0.20.2",
+    "nodemon": "^3.1.0"
+  }
+}

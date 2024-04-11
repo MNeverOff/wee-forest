@@ -1,0 +1,29 @@
+# Archive
+*.zip
+*.tar
+
+# Data
+data/area/
+data/tiles/
+data/source/
+data/processed/
+
+*.geojson
+*.mbtiles
+*.duckdb
+*.duckdb.wal
+*.parquet
+
+# Env, system files
+*.env
+.DS_Store
+.ipynb_checkpoints
+__pycache__
+package-lock.json
+
+# Build
+dist
+node_modules
+
+# Other
+/private

@@ -1,0 +1,32 @@
+services:
+  wee_forest_lens:
+    image: wee-forest-lens
+    container_name: wee_forest_lens
+    restart: unless-stopped
+    env_file: .env
+
+    ports:
+      - "3940:3939"
+    
+    environment:
+      - MAPBOX_TOKEN=$MAPBOX_TOKEN
+      - RECREATE_DATABASE=$RECREATE_DATABASE
+      - STATIC_SERVER_PATH=$STATIC_SERVER_PATH
+      - TILE_SERVER_HOST=$TILE_SERVER_HOST
+      - TILE_SERVER_PATH=$TILE_SERVER_PATH
+      - AREA_SERVER_PATH=$AREA_SERVER_PATH
+      - TILES_PATH=$TILES_PATH
+      - PARQUET_PATH=$PARQUET_PATH
+      - DUCKDB_PATH=$DUCKDB_PATH
+      - STATIC_DIR=$STATIC_DIR
+      - NODE_ENV=$NODE_ENV
+      - AREA_PORT=$AREA_PORT
+
+    volumes:
+      - ../data/area:/app/data/area
+      - ../data/tiles:/app/data/tiles
+
+networks:
+  default:
+    name: $DOCKER_MY_NETWORK
+    external: true

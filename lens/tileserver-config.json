@@ -1,0 +1,78 @@
+{
+    "options": {
+        "paths": {
+            "mbtiles": "../data/tiles"
+        }
+    },
+    "data": {
+        "gb_awi_dataset": {
+            "mbtiles": "gb_awi_dataset.mbtiles"
+        },
+        "gb_nfi_dataset_2012": {
+            "mbtiles": "gb_nfi_dataset_2012.mbtiles"
+        },
+        "gb_nfi_dataset_2013": {
+            "mbtiles": "gb_nfi_dataset_2013.mbtiles"
+        },
+        "gb_nfi_dataset_2014": {
+            "mbtiles": "gb_nfi_dataset_2014.mbtiles"
+        },
+        "gb_nfi_dataset_2015": {
+            "mbtiles": "gb_nfi_dataset_2015.mbtiles"
+        },
+        "gb_nfi_dataset_2016": {
+            "mbtiles": "gb_nfi_dataset_2016.mbtiles"
+        },
+        "gb_nfi_dataset_2017": {
+            "mbtiles": "gb_nfi_dataset_2017.mbtiles"
+        },
+        "gb_nfi_dataset_2018": {
+            "mbtiles": "gb_nfi_dataset_2018.mbtiles"
+        },
+        "gb_nfi_dataset_2019": {
+            "mbtiles": "gb_nfi_dataset_2019.mbtiles"
+        },
+        "gb_nfi_dataset_2020": {
+            "mbtiles": "gb_nfi_dataset_2020.mbtiles"
+        },
+        "gb_nfi_dataset_2021": {
+            "mbtiles": "gb_nfi_dataset_2021.mbtiles"
+        },
+        "gb_nfi_dataset_2022": {
+            "mbtiles": "gb_nfi_dataset_2022.mbtiles"
+        },
+        "gb_nfi_awi_overlay_2012": {
+            "mbtiles": "gb_nfi_awi_overlay_2012.mbtiles"
+        },
+        "gb_nfi_awi_overlay_2013": {
+            "mbtiles": "gb_nfi_awi_overlay_2013.mbtiles"
+        },
+        "gb_nfi_awi_overlay_2014": {
+            "mbtiles": "gb_nfi_awi_overlay_2014.mbtiles"
+        },
+        "gb_nfi_awi_overlay_2015": {
+            "mbtiles": "gb_nfi_awi_overlay_2015.mbtiles"
+        },
+        "gb_nfi_awi_overlay_2016": {
+            "mbtiles": "gb_nfi_awi_overlay_2016.mbtiles"
+        },
+        "gb_nfi_awi_overlay_2017": {
+            "mbtiles": "gb_nfi_awi_overlay_2017.mbtiles"
+        },
+        "gb_nfi_awi_overlay_2018": {
+            "mbtiles": "gb_nfi_awi_overlay_2018.mbtiles"
+        },
+        "gb_nfi_awi_overlay_2019": {
+            "mbtiles": "gb_nfi_awi_overlay_2019.mbtiles"
+        },
+        "gb_nfi_awi_overlay_2020": {
+            "mbtiles": "gb_nfi_awi_overlay_2020.mbtiles"
+        },
+        "gb_nfi_awi_overlay_2021": {
+            "mbtiles": "gb_nfi_awi_overlay_2021.mbtiles"
+        },
+        "gb_nfi_awi_overlay_2022": {
+            "mbtiles": "gb_nfi_awi_overlay_2022.mbtiles"
+        }
+    }
+}

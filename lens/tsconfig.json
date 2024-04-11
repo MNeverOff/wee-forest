@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "strict": true,
+        "lib": ["es2022", "dom"],
+        "esModuleInterop": true
+    },
+    "include": ["src", "images.d.ts"]
+}

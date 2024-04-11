@@ -1,0 +1,98 @@
+,year,source_index,type_combined,type_aggregate,type_source,area_ha
+0,2012,525403,Trees,Conifer,Conifer,170.6412711158998
+1,2012,525474,Trees,Conifer,Conifer,841.9215170233014
+2,2012,529062,Trees,Conifer,Conifer,249.74225768184937
+3,2012,529800,Trees,Mixed (conifer & broadleaved),Mixed mainly broadleaved,4.702862779949825
+4,2012,550028,Trees,Broadleaved,Broadleaved,90.87083681030097
+5,2012,555959,Trees,Broadleaved,Broadleaved,37.800513229399456
+6,2012,556376,Trees,Broadleaved,Broadleaved,48.99364829199944
+7,2012,557030,Trees,Broadleaved,Broadleaved,46.66049043210054
+8,2012,569161,Trees,Broadleaved,Broadleaved,21.95238073
+9,2012,569550,Trees,Broadleaved,Broadleaved,31.436962403449154
+10,2012,570669,Trees,Conifer,Conifer,1393.478954105003
+11,2013,12940,Trees,Conifer,Conifer,170.6412711158998
+12,2013,13012,Trees,Conifer,Conifer,816.3273397421519
+13,2013,16770,Trees,Conifer,Conifer,160.81766979134997
+14,2013,17535,Trees,Mixed (conifer & broadleaved),Mixed mainly broadleaved,4.702862779949825
+15,2013,72578,Trees,Broadleaved,Broadleaved,37.800513229399456
+16,2013,72995,Trees,Broadleaved,Broadleaved,48.99364872764951
+17,2013,73651,Trees,Broadleaved,Broadleaved,46.66049043210054
+18,2013,86444,Trees,Broadleaved,Broadleaved,90.87083681030099
+19,2013,118417,Trees,Broadleaved,Broadleaved,21.95238073
+20,2013,119236,Trees,Broadleaved,Broadleaved,31.436962403449154
+21,2013,122720,Trees,Conifer,Conifer,1393.478970545053
+22,2014,13304,Trees,Conifer,Conifer,170.6412711158998
+23,2014,13890,Trees,Conifer,Conifer,778.7227920916991
+24,2014,16379,Trees,Conifer,Conifer,160.81766979134997
+25,2014,17061,Trees,Mixed (conifer & broadleaved),Mixed mainly broadleaved,4.702862779949825
+26,2014,70714,Trees,Broadleaved,Broadleaved,37.800513229399456
+27,2014,71152,Trees,Broadleaved,Broadleaved,48.99364872764951
+28,2014,76239,Trees,Broadleaved,Broadleaved,46.66049043210054
+29,2014,92419,Trees,Broadleaved,Broadleaved,90.87083681030099
+30,2014,117106,Trees,Broadleaved,Broadleaved,21.95238073
+31,2014,125221,Trees,Broadleaved,Broadleaved,31.251068345599105
+32,2015,13102,Trees,Conifer,Conifer,170.6412711158998
+33,2015,13174,Trees,Conifer,Conifer,736.4361785946497
+34,2015,17051,Trees,Conifer,Conifer,160.81766979134997
+35,2015,17876,Trees,Mixed (conifer & broadleaved),Mixed mainly broadleaved,4.702862779949825
+36,2015,67774,Trees,Broadleaved,Broadleaved,37.800513229399456
+37,2015,68192,Trees,Broadleaved,Broadleaved,48.99364872764951
+38,2015,68851,Trees,Broadleaved,Broadleaved,46.66049043210054
+39,2015,84599,Trees,Broadleaved,Broadleaved,90.87083681030099
+40,2015,107901,Trees,Broadleaved,Broadleaved,21.95238073
+41,2015,108724,Trees,Broadleaved,Broadleaved,31.251068191099105
+42,2016,91187,Trees,Broadleaved,Broadleaved,90.87083681
+43,2016,102832,Trees,Broadleaved,Broadleaved,38.48119426
+44,2016,104153,Trees,Broadleaved,Broadleaved,48.99364873
+45,2016,105996,Trees,Broadleaved,Broadleaved,46.66049043
+46,2016,116870,Trees,Broadleaved,Broadleaved,21.95238073
+47,2016,118127,Trees,Broadleaved,Broadleaved,31.25106812
+48,2016,360380,Trees,Conifer,Conifer,201.3659444
+49,2016,360793,Trees,Conifer,Conifer,666.7658028
+50,2016,367187,Trees,Conifer,Conifer,279.4683628
+51,2016,500980,Trees,Mixed (conifer & broadleaved),Mixed mainly broadleaved,4.70286278
+52,2017,91447,Trees,Broadleaved,Broadleaved,90.87083681
+53,2017,103102,Trees,Broadleaved,Broadleaved,38.48119426
+54,2017,104423,Trees,Broadleaved,Broadleaved,48.99364873
+55,2017,106270,Trees,Broadleaved,Broadleaved,46.66049043
+56,2017,117173,Trees,Broadleaved,Broadleaved,21.95238073
+57,2017,118443,Trees,Broadleaved,Broadleaved,31.25106812
+58,2017,362874,Trees,Conifer,Conifer,201.3659444
+59,2017,363289,Trees,Conifer,Conifer,735.4168116
+60,2017,369684,Trees,Conifer,Conifer,279.4683628
+61,2017,505330,Trees,Mixed (conifer & broadleaved),Mixed mainly broadleaved,4.70286278
+62,2018,90236,Trees,Broadleaved,Broadleaved,90.87083681
+63,2018,90684,Trees,Broadleaved,Broadleaved,77.11941778
+64,2018,93475,Trees,Broadleaved,Broadleaved,14.87061539
+65,2018,101521,Trees,Broadleaved,Broadleaved,196.1211941
+66,2018,101885,Trees,Broadleaved,Broadleaved,38.48119426
+67,2018,104099,Trees,Broadleaved,Broadleaved,3.123232125
+68,2018,109659,Trees,Broadleaved,Broadleaved,82.82834527
+69,2018,122946,Trees,Broadleaved,Broadleaved,29.04126603
+70,2018,127023,Trees,Broadleaved,Broadleaved,34.11586744
+71,2018,357215,Trees,Conifer,Conifer,25.55709132
+72,2018,357303,Trees,Conifer,Conifer,51.91651702
+73,2018,357656,Trees,Conifer,Conifer,151.0297842
+74,2018,364976,Trees,Conifer,Conifer,447.3165366
+75,2018,365065,Trees,Conifer,Conifer,983.2693128
+76,2019,95060,Trees,Broadleaved,Broadleaved,88.98873229
+77,2019,106935,Trees,Broadleaved,Broadleaved,38.48119426
+78,2019,108275,Trees,Broadleaved,Broadleaved,48.99364788
+79,2019,110139,Trees,Broadleaved,Broadleaved,46.66049043
+80,2019,121142,Trees,Broadleaved,Broadleaved,22.22569137
+81,2019,122418,Trees,Broadleaved,Broadleaved,31.25106812
+82,2019,376394,Trees,Conifer,Conifer,212.0617105
+83,2019,519912,Trees,Mixed (conifer & broadleaved),Mixed mainly broadleaved,4.70286278
+84,2020,101247,Trees,Broadleaved,Broadleaved,46.66049043
+85,2020,376396,Trees,Conifer,Conifer,302.2804252
+86,2020,376450,Trees,Conifer,Conifer,529.9457108
+87,2020,471099,Barren & Felled,Barren & Felled,Felled,52.88992223
+88,2020,548850,Trees,Mixed (conifer & broadleaved),Mixed mainly conifer,18.39197938
+89,2021,102122,Trees,Broadleaved,Broadleaved,46.66049043
+90,2021,377302,Trees,Conifer,Conifer,496.8469294
+91,2021,472827,Barren & Felled,Barren & Felled,Felled,52.88992223
+92,2021,551872,Trees,Mixed (conifer & broadleaved),Mixed mainly conifer,18.39197938
+93,2022,469005,Trees,Broadleaved,Broadleaved,46.66049043
+94,2022,537605,Trees,Conifer,Conifer,443.201234
+95,2022,561434,Barren & Felled,Barren & Felled,Felled,52.88992223
+96,2022,604367,Trees,Mixed (conifer & broadleaved),Mixed mainly conifer,18.67526498
