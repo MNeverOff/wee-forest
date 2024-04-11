@@ -12,7 +12,7 @@
     "build": "npm install && node build.js",
     "serve": "node src/server.mjs",
     "prod": "npm run build && npm run serve",
-    "docker:build": "npm run build && docker build --build-arg GIT_HASH=$(git rev-parse --short HEAD) -t mneveroff/wee-forest-lens:$(git rev-parse --short HEAD) --no-cache ../",
+    "docker:build": "npm run build && docker build --build-arg GIT_HASH=$(git rev-parse --short HEAD) -t wee-forest-lens --no-cache ../",
     "docker:serve": "node server.mjs"
   },
   "repository": {
