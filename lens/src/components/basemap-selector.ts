@@ -37,10 +37,10 @@ export class BaseMapSelector {
         ) {
 
         this._container = document.createElement('div');
-        this._container.className = 'surface surface-left elevation-100 basemap-selector collapsed';
+        this._container.className = 'surface surface-left elevation-100 basemap-selector';
         this._parent.appendChild(this._container);
 
-        this._collapsibleWidget = new CollapsibleWidget(this._container, true);
+        this._collapsibleWidget = new CollapsibleWidget(this._container, window.innerWidth <= 575);
 
         this.render();
     }

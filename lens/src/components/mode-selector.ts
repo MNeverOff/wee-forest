@@ -36,7 +36,7 @@ export class ModeSelector {
         this._container.className = 'surface surface-left elevation-100 mode-selector';
         this._parent.appendChild(this._container);
 
-        this._collapsibleWidget = new CollapsibleWidget(this._container);
+        this._collapsibleWidget = new CollapsibleWidget(this._container, window.innerWidth <= 575);
 
         this.render();
     }

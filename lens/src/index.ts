@@ -30,4 +30,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const compareSelectedYear = params.get('cy') ? parseInt(params.get('cy')!) : undefined;
 
     new WeeForestMap('app-lens', {lat, lng, zoom, pitch}, selectedMode, selectedDataset, selectedBasemap, selectedDatasetDataTypeId, selectedYear, compareSelectedYear);
+
+    if (window.innerWidth <= 575) {
+        document.querySelector('.basemap-selector')?.classList.add('collapsed');
+        document.querySelector('.mode-selector')?.classList.add('collapsed');
+    }
 }); 

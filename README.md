@@ -4,7 +4,7 @@
 
 🗺️ Interactive map: [WeeForest Lens](https://weeforest.org/lens/)  
 🌐 Website: [WeeForest](https://weeforest.org/)  
-🔬 Methodology: [Research](research/README.md)
+🔬 Methodology & Findings: [Research](research/README.md)
 
 ## Disclaimer
 
