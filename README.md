@@ -2,6 +2,10 @@
 
 # Mapping trees of the United Kingdom
 
+🗺️ Interactive map: [WeeForest Lens](https://weeforest.org/lens/)  
+🌐 Website: [WeeForest](https://weeforest.org/)  
+🔬 Methodology: [Research](research/README.md)
+
 ## Disclaimer
 
 This work is not indented to be a piece of scientific research, nor is it a journalistic piece. It's a personal project that aims to make the data about trees in Great Britain more accessible and understandable, whilst still maintaining good industry practices.
