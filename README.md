@@ -16,7 +16,7 @@ I do not claim accuracy, expertise or authority in the field. I am, however, pas
 
 On one of the drives across the Scottish Highlands I have noticed rows of what seemed like rocks left on the hillsides around us, next to lush and orderly rows of conifers. Puzzled and back home I looked up the area on satellite maps and after a few minutes of searching discovered the reality of forestry industry in the UK.
 
-Being already rather sad about the overall state of biodiversity on the British Isles I wanted to learn where can I find the "real trees" that I could visit or enjoy driving by. I quickly learned that only a fraction of Scottish (and British for that matter) woodlands are native, and of the "woodland" reported by Forestry Commission's National Forest Inventory, almost 20% or some `500,000 ha` are currently Felled and Barren, devoid if any visible vegetation as of 2022.
+Being already rather sad about the overall state of biodiversity on the British Isles I wanted to learn where can I find the "real trees" that I could visit or enjoy driving by. I quickly learned that only a fraction of Scottish (and British for that matter) woodlands are native, and of the "woodland" reported by Forestry Commission's National Forest Inventory, almost 20% or some `600,000 ha` are currently Felled and Barren, devoid if any visible vegetation as of 2022.
 
 This lack of transparency in definition has prompted me to visualise it, which led me on a spiral of data collection, methodology analysis and learning about the evolution of definition of "woodland", "native trees", "trees outside woods" and other relevant terms in the UK tree-related discourse.
 
@@ -36,9 +36,9 @@ Separately there's a [docker](docker) folder with a sample docker compose config
 
 As this repository doesn't have neither raw nor processed data attached, you would need to perform a few steps to get the .mbtiles and .parquet files used in area visualisation calculation:
 
-1. Clone the repository
-1. Configure VSCode to run Jupyter Notebooks by installing Python, Jupyter and Polyglot Notebooks extensions
-1. Configure the git filter to remove Notebook outputs: `git config filter.strip-notebook-output.clean 'jupyter nbconvert --ClearOutputPreprocessor.enabled=True --to=notebook --stdin --stdout --log-level=ERROR'`
+1. Clone the repository.
+1. Configure VSCode to run Jupyter Notebooks by installing Python, Jupyter and Polyglot Notebooks extensions.
+1. Configure the git filter to remove Notebook outputs: `git config filter.strip-notebook-output.clean 'jupyter nbconvert --ClearOutputPreprocessor.enabled=True --to=notebook --stdin --stdout --log-level=ERROR'`.
 1. Run the [AWI Notebook](data/uk_gb_awi.ipynb) after downloading the data from the Sources section within - this will generate the Ancient Woodland Inventory data.
 1. Run the [NFI Notebook](data/uk_gb_nfi.ipynb) after downloading the data from the Sources section within - this will generate the National Forest Inventory data.
 1. Run the [Overlay Notebook](data/uk_gb_nfi_awi_overlay.ipynb), to completion - this will overlay both datasets and produce the overlay data.
@@ -65,9 +65,9 @@ Consult the relevant project (Data, Lens, Research) for a more detailed list if 
 
 I want commend following organisations and people, for without their work this project would not be possible:
 
-- People of the National Forest Inventory and Forestry Commission for providing the data and making it available to the public, including woodland, ecological condition and trees outside woodland datasets
-- The Native Woodland Survey of Scotland team for the best piece of native woodland research and mapping in the UK to date
-- Various maintainers and contributors to the Ancient Woodland Inventories
+- People of the National Forest Inventory and Forestry Commission for providing the data and making it available to the public, including woodland, ecological condition and trees outside woodland datasets.
+- The Native Woodland Survey of Scotland team for the best piece of native woodland research and mapping in the UK to date.
+- Various maintainers and contributors to the Ancient Woodland Inventories.
 
 Separately, want to extend my thanks to:
 

@@ -45,7 +45,7 @@ export class Popup {
         Popup._activePopup = this;
     
         this._mode = mode;
-        var area = feature.properties.area_ha;
+        const area = feature.properties.area_ha;
         
         const lngLat = mapboxgl.LngLat.convert(coordinates);
         const altitude = this.getAltitude(zoom);

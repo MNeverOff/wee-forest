@@ -7,12 +7,6 @@ export enum BaseMapType {
     Fallback = 'mapbox://styles/mapbox/standard'
 }
 
-type BaseMap = {
-    id: string;
-    label: string;
-    style: string;
-}
-
 export const BaseMaps = [
     {
         id: BaseMapType.Light,
