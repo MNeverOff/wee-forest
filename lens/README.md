@@ -88,3 +88,15 @@ With regards to the Lens, there are a few areas where help would be greatly appr
 
 1. Security, Caching and Performance improvements. I have opted to go for a JS backend for simplicity of runtime (both DuckDB and Tileserver supported it out of the box) but it's not the most performant solution, with fastAPI on Python, Go and Kestrel being arguably better options. I also have put in place rather rudimentary caching and security practices so I would appreciate any advise and help in that area.
 2. Moving away form Mapbox. It's very costly past the 50,000 map loads but the main thing holding me from shifting to maplibre-gl is lack of easily attainable terrain and hillshading styles for 3D. If you have experience with creating such styles or know of a good source of open data for it, please let me know. **Alternatively**, securing a more generous Mapbox grant would also be a great help as I enjoy working with their tech a fair bit.
+
+## On File Structure
+
+I have opted in for a simplified file structure, foregoing some of the industry standard practices like single export per file and the likes, preferring to keep semantically related code within the same file wherever it was feasible and still read well.
+Ideally, with further growth of the project, the following changes would be made:
+
+- Separating out the Pages from page.ts into their own files, keeping the abstract separate.
+- Separate the dataset.ts and it's contents into descriptive files: enums, types, constants, etc.
+- Create a standalone folder for the Map State Manager.
+- I would separate abstract and reusable classes (Collapsible Widget, Page) into their own folder to ease the navigation and understanding of the codebase.
+
+Finally, I would add simple unit tests for selectors coupled with the Map State as well as integration tests for the Map State Manager.

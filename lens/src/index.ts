@@ -4,8 +4,8 @@ import './assets/colors.css'
 import './assets/map.css'
 import './assets/page.css'
 
-import { WeeForestMap } from './models/map';
-import { WelcomePage, LearnPage, ActPage, SharePage } from './models/page';
+import { WeeForestMap } from './components/map';
+import { WelcomePage, LearnPage, ActPage, SharePage } from './components/page';
 import { DatasetTypes, DatasetDataTypes } from './models/dataset';
 import { BaseMapType } from './components/basemap-selector';
 import { MapModeTypes } from './components/mode-selector';

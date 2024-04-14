@@ -2,12 +2,12 @@ import mapboxgl from 'mapbox-gl';
 declare const require: any; // Doesn't have typings so will have to do
 const mapboxglCompare: any = require('mapbox-gl-compare');
 
-import { Popup } from '../components/popup';
-import { Legend } from '../components/legend';
-import { BaseMapSelector, BaseMapType, BaseMaps } from '../components/basemap-selector';
-import { ModeSelector, MapModeTypes, MapModes } from '../components/mode-selector';
-import { DatasetSelector } from '../components/dataset-selector';
-import { DatasetTypes, DatasetDataTypes, DatasetConfigs, DatasetConfig, DatasetDataType, FeatureSetting } from './dataset';
+import { Popup } from './popup';
+import { Legend } from './legend';
+import { BaseMapSelector, BaseMapType, BaseMaps } from './basemap-selector';
+import { ModeSelector, MapModeTypes, MapModes } from './mode-selector';
+import { DatasetSelector } from './dataset-selector';
+import { DatasetTypes, DatasetDataTypes, DatasetConfigs, DatasetConfig, DatasetDataType, FeatureSetting } from '../models/dataset';
 
 // Default for the UK&I to be visible in the middle
 const defaultBounds = [ -12, 48, 7, 61 ];
