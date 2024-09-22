@@ -32,7 +32,7 @@
     "dotenv": "^16.4.5",
     "duckdb": "^0.10.1",
     "events": "^3.3.0",
-    "express": "^4.19.2",
+    "express": "^4.20.0",
     "express-rate-limit": "^7.2.0",
     "http-proxy-middleware": "^2.0.6",
     "lit": "^3.1.2",
